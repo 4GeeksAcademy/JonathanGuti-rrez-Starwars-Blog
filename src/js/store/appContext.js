@@ -18,8 +18,10 @@ const injectContext = PassedComponent => {
 						store: Object.assign(state.store, updatedStore),
 						actions: { ...state.actions }
 					})
-			})
+			}),
+			{ store: {}, actions: {} } // Inicializando state como un objeto vacío
 		);
+
 
 		useEffect(() => {
 			/**
